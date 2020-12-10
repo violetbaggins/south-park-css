@@ -1,0 +1,527 @@
+:root{
+
+  --header-bg-color: #D81159;
+  --header-txt-color: #FFE2AD;
+  --header-a-color: darksalmon;
+  --main-bg-color: #FFBC42;
+  --contenedor: #986cc2;
+  --nombre-bg-color: #7a1bb1;
+  --nombre-color: pink;
+}
+.darkmode{
+  --header-bg-color: #7a5864;
+  --header-txt-color: #fa8be2;
+  --header-a-color: rgb(215, 248, 25);
+  --main-bg-color: #202020;
+  --contenedor: #585858;
+  --nombre-bg-color: #f9f9fa;
+  --nombre-color: rgb(0, 0, 0);
+}
+
+.darkmode{
+  --header-bg-color: #7a5864;
+  --header-txt-color: #fa8be2;
+  --header-a-color: rgb(215, 248, 25);
+  --main-bg-color: #202020;
+  --contenedor: #585858;
+  --nombre-bg-color: #f9f9fa;
+  --nombre-color: rgb(0, 0, 0);
+}
+
+ *{
+   border-box: box-sizing;
+   margin:0;
+  }
+  body{
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    font-family: sans-serif;
+    
+  }
+  header, footer{
+    background-color: var(--header-bg-color);
+    color:var(--header-txt-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #darkmodediv{
+    position: absolute;
+    right: 20px;
+    top:5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    align-items: center;
+  }
+
+  a{
+      text-decoration: none;
+      font-size: 24px;
+      color: var(--header-a-color);
+  }
+  .carrito{
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    background-color: #372b7c;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+
+  /* CHECKBOX CON FILTROS */
+  input[type="checkbox"]{
+    cursor: pointer;
+    margin: 5px auto;
+   }
+             
+/*    input[type="checkbox"]:checked~*
+    {
+     
+     filter: grayscale(50%) blur(3px) invert(70%);
+    } */
+
+  main{
+    background-color:var(--main-bg-color); 
+    flex-grow:1;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+ 
+ 
+  .main-column{
+    background-color:var(--main-bg-color); 
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nombre{
+    position: absolute;
+
+    bottom: -15px;
+    left: -8px;
+
+    background-color: var( --nombre-bg-color);
+    color: var( --nombre-color);
+    padding: 10px;
+    border-radius: 15px;
+    
+  }
+
+  /* STAN */
+  .contenedor{
+    position: relative;
+    background-color: var(--contenedor);
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    filter: inherit;
+    
+  }
+  .cabeza{
+    position:absolute;
+    
+    width: 150px;
+    height: 150px;
+    left:25px;
+    top:20px;
+ 
+    background-color: #ecc99b;
+    border-radius: 100px;
+  }
+  .gorro{
+    position:absolute;
+    
+    width: 156px;
+    height: 70px;
+    left:23px;
+    top:15px;
+
+    background-color: #372b7c;
+    border-radius: 180px 180px 0px 0px;
+  }
+  .borde-gorro{
+    position:absolute;
+    
+    width: 165px;
+    height: 20px;
+    left:19px;
+    top:70px;
+
+    background-color: #ca0e0e;
+    border-radius: 50px;
+  }
+ .ojo-1{
+    position:absolute;
+    
+    width: 45px;
+    height: 55px;
+    left: 58px;
+    top: 90px;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    transform: rotate(25deg);
+ }
+ .ojo-2{
+    position:absolute;
+    
+    width: 45px;
+    height: 55px;
+    left: 103px;
+    top: 90px;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    transform: rotate(-25deg);
+ }
+ .pupila-1{
+    position:absolute;
+    
+    width: 10px;
+    height: 10px;
+    left: 85px;
+    top: 115px;
+
+    background-color: #000000;
+    border-radius: 50%;
+ }
+ .pupila-2{
+    position:absolute;
+    
+    width: 10px;
+    height: 10px;
+    left: 120px;
+    top: 115px;
+
+    background-color: #000000;
+    border-radius: 50%;
+ }
+ .sonrisa{
+    position:absolute;
+    
+    width: 30px;
+    height: 30px;
+    left: 88px;
+    top: 130px;
+
+    /* background-color: #000000; */
+    border-radius: 50%;
+    border-bottom: 3px solid black
+ }
+ .palito-1{
+    position:absolute;
+    
+    width: 8px;
+    height: 30px;
+    left:100px;
+    top:5px;
+
+    background-color: #ca0e0e;
+    
+  }
+  .palito-2{
+    position:absolute;
+    transform: rotate(90deg);
+    
+    width: 8px;
+    height: 30px;
+    left:100px;
+    top:5px;
+
+    background-color: #ca0e0e;
+    
+  }
+  .palito-3{
+    position:absolute;
+    transform: rotate(45deg);
+    
+    width: 8px;
+    height: 30px;
+    left:100px;
+    top:5px;
+
+    background-color: #ca0e0e;
+    
+  }
+  .palito-4{
+    position:absolute;
+    transform: rotate(-45deg);
+    
+    width: 8px;
+    height: 30px;
+    left:100px;
+    top:5px;
+
+    background-color: #ca0e0e;
+    
+  }
+
+/* KYLE */
+
+.contenedor-kyle{
+    position: relative;
+    background-color:var(--contenedor);
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    filter: inherit;
+  }
+
+.gorro-kyle{
+    position:absolute;
+    
+    width: 156px;
+    height: 70px;
+    left:23px;
+    top:15px;
+
+    background-color: #2ccc34;
+    border-radius: 50% 50% 0px 0px;
+  }
+  .borde-gorro-kyle{
+    position:absolute;
+    
+    width: 136px;
+    height: 50px;
+    left:33px;
+    top:40px;
+
+    background-color: #1f7423;
+    border-radius: 50% 50% 0px 0px;
+  }
+
+  .oreja-gorro-kyle-1{
+    position:absolute;
+    
+    width: 30px;
+    height: 75px;
+    left: 10px;
+    top: 80px;
+
+    background-color: #2ccc34;
+    border-top: 1px solid #1f7423;
+    border-radius: 50%;
+
+    transform: rotate(10deg);
+ }
+
+ .oreja-gorro-kyle-2{
+  position:absolute;
+  
+  width: 30px;
+  height: 75px;
+  right: 10px;
+  top: 80px;
+
+  background-color: #2ccc34;
+  border-top: 1px solid #1f7423;
+  border-radius: 50%;
+
+  transform: rotate(-10deg);
+}
+
+/* KENNY */
+.contenedor-kenny{
+  position: relative;
+  background-color: var(--contenedor);
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  filter: inherit;
+}
+.gorro-kenny{
+  position:absolute;
+    
+  width: 150px;
+  height: 150px;
+  left:25px;
+  top:20px;
+
+  background-color: #fa4c07;
+  border-radius: 100px;
+}
+.borde-gorro-kenny-1 {
+  position: absolute;
+  top: 50px;
+  left: 65px;
+  width: 100px;
+  height: 100px;
+  
+  transform: rotate(155deg);
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0px 0px #963e1b; 
+}
+.borde-gorro-kenny-2 {
+  position: absolute;
+  top: 50px;
+  left: 35px;
+  width: 100px;
+  height: 100px;
+  
+  transform: rotate(-20deg);
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0px 0px #963e1b; 
+}
+.cabeza-kenny{
+  position:absolute;
+  
+  width: 80px;
+  height: 98px;
+  left:65px;
+  top:52px;
+
+  background-color: #ecc99b;
+  border-radius: 100px;
+}
+.ojo-1-kenny{
+
+  top: 70px;
+
+}
+.ojo-2-kenny{
+
+  top: 70px;
+
+}
+.pupila-1-kenny{
+
+  left: 85px;
+  top: 90px;
+
+}
+.pupila-2-kenny{
+ 
+  left: 120px;
+  top: 90px;
+
+}
+
+
+/* CARTMAN */
+.contenedor-cartman{
+  position: relative;
+  background-color: var(--contenedor);
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  filter: inherit;
+}
+.cabeza-cartman{
+  position:absolute;
+  
+  width: 180px;
+  height: 150px;
+  left:12px;
+  top:20px;
+
+  background-color: #ecc99b;
+  border-radius: 50%;
+}
+.gorro-cartman{
+  position:absolute;
+  
+  width: 185px;
+  height: 70px;
+  left:11px;
+  top:15px;
+
+  background-color: #3bcae4;
+  border-radius: 180px 180px 0px 0px;
+}
+.borde-gorro-cartman{
+  position:absolute;
+  
+  width: 190px;
+  height: 20px;
+  left:8px;
+  top:70px;
+
+  background-color: #fcee30;
+  border-radius: 50px;
+}
+.pompon-1{
+  position:absolute;
+  
+  width: 20px;
+  height: 20px;
+  left:75px;
+  top:10px;
+
+  background-color: #fcee30;
+  border-radius: 50px;
+}
+.pompon-2{
+  position:absolute;
+  
+  width: 20px;
+  height: 20px;
+  left:90px;
+  top:7px;
+
+  background-color: #fcee30;
+  border-radius: 50px;
+}
+.pompon-3{
+  position:absolute;
+  
+  width: 20px;
+  height: 20px;
+  left:108px;
+  top:10px;
+
+  background-color: #fcee30;
+  border-radius: 50px;
+}
+.pompon-4{
+  position:absolute;
+  
+  width: 20px;
+  height: 20px;
+  left:82px;
+  top:15px;
+
+  background-color: #fcee30;
+  border-radius: 50px;
+}
+.pompon-5{
+  position:absolute;
+  
+  width: 20px;
+  height: 20px;
+  left:100px;
+  top:15px;
+
+  background-color: #fcee30;
+  border-radius: 50px;
+}
+
+@media (max-width: 479px) {
+
+  .carrito{
+    
+   /*  position: fixed; */
+    bottom: 40px;
+/*     right: 20px; */
+
+    background-color: #04fc04;
+   /*  padding: 10px;
+    border-radius: 50%;
+    z-index: 1000; */
+  }
+}
